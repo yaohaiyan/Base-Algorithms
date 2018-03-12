@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "BubbleSort.h"
 
 
@@ -15,11 +15,11 @@ BubbleSort::~BubbleSort()
 
 void BubbleSort::sort(std::vector<int> &sortVector)
 {
-	//Íâ²ãÑ­»·£¬ÉèÖÃÍâ²ãÑ­»·´ÎÊı
+	//å¤–å±‚å¾ªç¯ï¼Œè®¾ç½®å¤–å±‚å¾ªç¯æ¬¡æ•°
 	for (int cycleNumbers = sortVector.size(); cycleNumbers > 0; cycleNumbers--)
 	{
 		bool flag = true;
-		//ÄÚ²ãÑ­»·£¬ÒÀ´Î½«½Ï´óµÄÊıºóÒÆ
+		//å†…å±‚å¾ªç¯ï¼Œä¾æ¬¡å°†è¾ƒå¤§çš„æ•°åç§»
 		for (int currOperationIndex = 0; currOperationIndex < cycleNumbers - 1; currOperationIndex++)
 		{
 			if (sortVector[currOperationIndex + 1] < sortVector[currOperationIndex])

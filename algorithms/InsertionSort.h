@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "SortingAlgorithm.h"
 class InsertionSort :
 	public SortingAlgorithm

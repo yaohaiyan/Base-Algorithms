@@ -1,4 +1,4 @@
-#include "stdafx.h"
+Ôªø#include "stdafx.h"
 #include "InsertionSort.h"
 
 
@@ -11,7 +11,7 @@ InsertionSort::InsertionSort()
 InsertionSort::~InsertionSort()
 {
 }
-//¥”–°µΩ¥Û≈≈–Ú
+//‰ªéÂ∞èÂà∞Â§ßÊéíÂ∫è
 void InsertionSort::sort(std::vector<int> &sortVector)
 {
 	//generalInsert(sortVector);
@@ -66,7 +66,7 @@ int InsertionSort::findSmallerIndex(std::vector<int> sortVector, int tailIndex)
 	int middle = 0;
 	while (true)
 	{
-		middle = (high - low) / 2 + low; // ÷±Ω” π”√(high + low) / 2 ø…ƒ‹µº÷¬“Á≥ˆ
+		middle = (high - low) / 2 + low; // Áõ¥Êé•‰ΩøÁî®(high + low) / 2 ÂèØËÉΩÂØºËá¥Ê∫¢Âá∫
 		if (sortVector.at(middle) >= targetValue)
 		{
 			high = middle;
