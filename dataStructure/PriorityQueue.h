@@ -2,10 +2,16 @@
 
 #include <vector>
 
-struct Data
+struct Element
 {
-	int key;
-	
+	int handle;
+	char data;
+};
+
+enum HeapType
+{
+	MIN_HEAP = -1,
+	MAX_HEAP = 1
 };
 
 class PriorityQueue
@@ -14,13 +20,11 @@ public:
     PriorityQueue();
     ~PriorityQueue();
     
-	void insert(Data);
-	Data maximun();
-	Data extractMax();
-	void increaseKey(Data data, int key);
+private:
+	void heapify(int type);
+	virtual void buildHeap() = 0;
 
 private:
-
-private:
-    std::vector<Data> queue;
+    std::vector<Element> queue;
+	HeapType type; // 目前只有两种
 };
