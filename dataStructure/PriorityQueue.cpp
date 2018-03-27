@@ -1,5 +1,12 @@
+#include "stdafx.h"
 #include "PriorityQueue.h"
 #include <iostream>
+
+std::ostream & operator<<(std::ostream & out, const Element & obj)
+{
+	out << '[' << obj.handle << ',' << obj.data << ']';
+	return out;
+}
 
 PriorityQueue::PriorityQueue()
 {
@@ -8,7 +15,7 @@ PriorityQueue::PriorityQueue()
 
 PriorityQueue::~PriorityQueue()
 {
-
+	std::vector<Element>().swap(this->queue);
 }
 
 void PriorityQueue::heapify(int index)
@@ -47,4 +54,37 @@ void PriorityQueue::heapify(int index)
 			break;
 		}
 	}
+}
+
+Element PriorityQueue::extractM()
+{
+	int length = this->queue.size();
+	if (length < 1)
+	{
+		std::cout << "队列中没有元素" << std::endl;
+		return Element();
+	}
+
+	Element m = this->queue[0];
+	this->queue[0] = this->queue[length - 1];
+	this->queue.pop_back();
+
+	heapify(0);
+
+	return m;
+}
+
+void PriorityQueue::printAllElement()
+{
+	int length = this->queue.size();
+	for (int i = 0; i < length; i++)
+	{
+		std::cout << this->queue[i];
+	}
+	std::cout << std::endl;
+}
+
+int PriorityQueue::getParentIndex(int index)
+{
+	return index % 2 == 0 ? index / 2 - 1 : index / 2;
 }

@@ -24,6 +24,12 @@
     <ClInclude Include="PriorityQueue.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="MaxPriorityQueue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MinPriorityQueue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -33,6 +39,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="PriorityQueue.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxPriorityQueue.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MinPriorityQueue.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

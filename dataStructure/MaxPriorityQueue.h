@@ -7,9 +7,9 @@ public:
 	MaxPriorityQueue();
 	~MaxPriorityQueue();
 
-	virtual void buildHeap() override;
 	Element maximun();
 	Element extractMax();
-	void increaseKey(Element data, int handle);
+	void increaseKey(int targetIndex, int handle);
+	void insert(Element element);
 };
 

@@ -1,11 +1,15 @@
 #pragma once
 
 #include <vector>
+#include <ostream>
 
 struct Element
 {
 	int handle;
-	char data;
+	int data;
+
+public:
+	friend std::ostream & operator << (std::ostream &out, const Element &obj);
 };
 
 enum HeapType
@@ -19,12 +23,16 @@ class PriorityQueue
 public:
     PriorityQueue();
     ~PriorityQueue();
-    
-private:
-	void heapify(int type);
-	virtual void buildHeap() = 0;
 
-private:
-    std::vector<Element> queue;
+	void heapify(int index);
+
+	void printAllElement();
+
+protected:
+	Element extractM();
+	int getParentIndex(int index);
+
+protected:
 	HeapType type; // 目前只有两种
+	std::vector<Element> queue;
 };
