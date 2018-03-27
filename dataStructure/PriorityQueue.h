@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <vector>
 #include <ostream>
@@ -33,6 +33,6 @@ protected:
 	int getParentIndex(int index);
 
 protected:
-	HeapType type; // Ä¿Ç°Ö»ÓĞÁ½ÖÖ
+	HeapType type; // ç›®å‰åªæœ‰ä¸¤ç§
 	std::vector<Element> queue;
 };

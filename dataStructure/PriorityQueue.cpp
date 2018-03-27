@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "PriorityQueue.h"
 #include <iostream>
 
@@ -10,7 +10,7 @@ std::ostream & operator<<(std::ostream & out, const Element & obj)
 
 PriorityQueue::PriorityQueue()
 {
-	type = MAX_HEAP; // Ä¬ÈÏ×î´óÓÅÏÈ¶ÓÁÐ
+	type = MAX_HEAP; // é»˜è®¤æœ€å¤§ä¼˜å…ˆé˜Ÿåˆ—
 }
 
 PriorityQueue::~PriorityQueue()
@@ -61,7 +61,7 @@ Element PriorityQueue::extractM()
 	int length = this->queue.size();
 	if (length < 1)
 	{
-		std::cout << "¶ÓÁÐÖÐÃ»ÓÐÔªËØ" << std::endl;
+		std::cout << "é˜Ÿåˆ—ä¸­æ²¡æœ‰å…ƒç´ " << std::endl;
 		return Element();
 	}
 

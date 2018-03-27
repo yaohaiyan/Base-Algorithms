@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "MaxPriorityQueue.h"
 #include <iostream>
 
@@ -15,7 +15,7 @@ MaxPriorityQueue::~MaxPriorityQueue()
 
 Element MaxPriorityQueue::maximun()
 {
-	return this->queue.at(0); // ¿ÉÄÜ»áÔ½½ç
+	return this->queue.at(0); // å¯èƒ½ä¼šè¶Šç•Œ
 }
 
 Element MaxPriorityQueue::extractMax()
@@ -27,7 +27,7 @@ void MaxPriorityQueue::increaseKey(int targetIndex, int handle)
 {
 	if (this->queue.at(targetIndex).handle > handle)
 	{
-		std::cout << "¾ä±úÐ¡ÓÚÒªÔö¼ÓÈ¨ÖØµÄÔªËØµÄ¾ä±ú" << std::endl;
+		std::cout << "å¥æŸ„å°äºŽè¦å¢žåŠ æƒé‡çš„å…ƒç´ çš„å¥æŸ„" << std::endl;
 		return;
 	}
 

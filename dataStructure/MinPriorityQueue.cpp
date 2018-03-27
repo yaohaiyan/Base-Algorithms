@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "MinPriorityQueue.h"
 #include <iostream>
 
@@ -16,7 +16,7 @@ MinPriorityQueue::~MinPriorityQueue()
 
 Element MinPriorityQueue::minimum()
 {
-	return this->queue.at(0); // ¿ÉÄÜ»áÔ½½ç
+	return this->queue.at(0); // å¯èƒ½ä¼šè¶Šç•Œ
 }
 
 Element MinPriorityQueue::extractMin()
@@ -28,7 +28,7 @@ void MinPriorityQueue::decreaseKey(int targetIndex, int handle)
 {
 	if (this->queue.at(targetIndex).handle < handle)
 	{
-		std::cout << "¾ä±ú´óÓÚÒªÔö¼ÓÈ¨ÖØµÄÔªËØµÄ¾ä±ú" << std::endl;
+		std::cout << "å¥æŸ„å¤§äºŽè¦å¢žåŠ æƒé‡çš„å…ƒç´ çš„å¥æŸ„" << std::endl;
 		return;
 	}
 

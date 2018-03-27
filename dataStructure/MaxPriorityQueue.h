@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "PriorityQueue.h"
 class MaxPriorityQueue :
 	public PriorityQueue
